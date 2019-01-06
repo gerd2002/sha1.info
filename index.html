@@ -42,7 +42,7 @@
       input#hash-out {
         font-weight: bold;
       }
-      input#hash-out.nonempty {
+      input.correct {
         color: #19cf9b;
         border-color: #19cf9b;
       }
@@ -99,7 +99,7 @@ window.sha1 = SHA1;
         function updateHash() {
           window.hash.value = window.sha1(window.plain.value);
           if (plain.value.match(".{1,32}#\\d{4}")) {
-            window.hash.className = "nonempty";
+            window.hash.className = "correct";
           } else {
             window.hash.className = "";
           }
