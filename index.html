@@ -98,7 +98,7 @@ window.sha1 = SHA1;
         window.hash.value = "da39a3ee5e6b4b0d3255bfef95601890afd80709"
         function updateHash() {
           window.hash.value = window.sha1(window.plain.value);
-          if (plain.value.match(".{1,32}#\\d{4}")) {
+          if (plain.value.match("^@?.{1,32}#\\d{4}$")) {
             window.hash.className = "correct";
           } else {
             window.hash.className = "";
